@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ToDoListApp"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="ToDoListApp.MainPage">
 
     <ContentPage.BindingContext>
@@ -24,6 +25,9 @@
                     <ViewCell>
 
                         <FlexLayout  JustifyContent="SpaceBetween" AlignItems="Center" Padding="2">
+
+                            <input:CheckBox IsChecked="{Binding Complete}"/>
+                            
                             <Label Text="{Binding TodoText}" FontSize="Large" />
 
                             <ImageButton 
